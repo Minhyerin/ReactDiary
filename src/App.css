@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Dovemayo_gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: "Dovemayo_gothic";
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.App {
+  width: 500px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(255, 242, 225);
 }
 
-.App-link {
-  color: #61dafb;
+.DiaryEditor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.DiaryEditor h1 {
+  text-align: center;
+  color: saddlebrown;
+}
+.DiaryEditor .author {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.DiaryEditor .author label {
+  font-weight: noraml;
+  color: chocolate;
+}
+.DiaryEditor .author input {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid chocolate;
+  padding: 5px;
+  font-size: 15px;
+  color: #333;
+}
+.DiaryEditor .author input:focus {
+  outline: none;
+}
+.DiaryEditor .content {
+  width: 100%;
+}
+.DiaryEditor .content textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid chocolate;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  color: #333;
+}
+.DiaryEditor .content textarea:focus {
+  outline: none;
+}
+.DiaryEditor .bottom {
+  width: 100%;
+
+  display: flex;
+  gap: 20px;
+}
+.DiaryEditor .bottom .emotion {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.DiaryEditor .bottom .emotion span {
+  color: chocolate;
+}
+.DiaryEditor .bottom .emotion select {
+  cursor: pointer;
+  border: 1px solid chocolate;
+  border-radius: 5px;
+  padding: 5px;
+  color: saddlebrown;
+  font-size: 16px;
+}
+.DiaryEditor .bottom .emotion select:focus {
+  outline: none;
+}
+.DiaryEditor .bottom button {
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: chocolate;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+.DiaryEditor .bottom button:active {
+  box-shadow: inset 3px 3px 10px brown;
+}
+.DiaryList {
+  margin-top: 20px;
+  border-top: 1px dashed chocolate;
+}
+.DiaryList .title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.DiaryList h2 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 22px;
+  color: saddlebrown;
+}
+.DiaryList h4 {
+  font-weight: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.DiaryItem {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid chocolate;
+  margin-bottom: 20px;
+}
+.DiaryItem .info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.DiaryItem .info span {
+  font-size: 15px;
+  color: #333;
+  padding: 1px;
+  border-bottom: 1px solid #888;
+}
+.DiaryItem .date {
+  margin-top: 5px;
+}
+.DiaryItem .date {
+  font-size: 14px;
+  color: gray;
+}
+.DiaryItem .content {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+.DiaryItem .btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.DiaryItem button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid chocolate;
+  color: chocolate;
+}
+.DiaryItem textarea {
+  padding: 5px;
+  width: 100%;
+  border: 1px dashed chocolate;
+  outline: none;
+  border-radius: 5px;
 }
