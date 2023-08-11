@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import DiaryEditor from "./Components/DiaryEditor";
 import DiaryList from "./Components/DiaryList";
